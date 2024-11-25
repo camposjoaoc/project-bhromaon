@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/index.css">
+    <!-- JavaScript files -->
     <script src="./scripts/navbar-script-menu.js" defer></script>
     <script src="./scripts/scroll-down.script.js" defer></script>
     <!-- Favicon and Title -->
@@ -23,9 +24,6 @@
 
 <body>
     <header>
-        <nav></nav>
-    </header>
-    <main>
         <!-- Section 1 -->
         <section class="container-section">
             <div class="container-section-1">
@@ -42,9 +40,12 @@
                     </div>
 
                     <div class="search-box">
-                        <form action="POST">
-                            <input type="text" placeholder="Search Your Travel Destination" class="input-style">
-                            <button type="button" class="button-standard">SEARCH <i class="fa fa-search"></i></button>
+                        <form action="index.html" method="GET">
+                            <input type="text" name="destination" placeholder="Search Your Travel Destination"
+                                class="input-style" required minlength="3" title="Please enter at least 3 characters.">
+                            <button type="submit" class="button-standard">
+                                SEARCH <i class="fa fa-search"></i>
+                            </button>
                         </form>
 
                     </div>
@@ -56,7 +57,40 @@
                 </div>
             </div>
         </section>
-
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar-inside">
+                <!-- Website title that redirects to the homepage when clicked -->
+                <div class="navbar-title" onclick="window.location.href='../index.html'">BHROMAON</div>
+                <!-- Desktop navigation links -->
+                <ul class="nav-links-desktop">
+                    <li><a href="#">WHO WE ARE</a></li>
+                    <li><a href="#">WHAT WE DO</a></li>
+                    <li><a href=".#">TRAVEL WITH US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+                <!-- Mobile menu for smaller screens -->
+                <div class="mobile-menu" id="mobileMenu">
+                    <!-- Close button for the mobile menu -->
+                    <button class="close" id="closeButton">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <!-- Mobile navigation links -->
+                    <ul class="nav-links-mobile">
+                        <li><a href="#">WHO WE ARE</a></li>
+                        <li><a href="#">WHAT WE DO</a></li>
+                        <li><a href=".#">TRAVEL WITH US</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <!-- Hamburger button to open the mobile menu -->
+                <button class="hamburger" id="hamburgerButton">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
         <!-- Section 2 -->
         <section class="container-section" id="target-section">
             <div class="container-section-2">
@@ -153,9 +187,8 @@
     </main>
     <footer>
         <div class="footer-content">
-            <!-- Copyright notice -->
+            <!-- Website Title -->
             <p class="footer-first-title">BHROMAON</p>
-            <!-- Copyright notice -->
             <p class="footer-second-title">Safe Travel Anywhere</p>
             <!-- Social media icons with links to platforms -->
             <div class="social-icons">

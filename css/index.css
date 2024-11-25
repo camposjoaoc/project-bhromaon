@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/* Importing necessary modules and styles */
+/* Importing modules and global styles */
 /* Font and color variables */
 /* Font for logos and headers to create a unique brand style */
 /* Primary font for most content to ensure readability */
@@ -8,6 +7,159 @@
 /* Secondary color for backgrounds or contrasting areas (white/gray) */
 /* Tertiary color for backgrounds or contrasting areas (black) */
 /* Font styles and variables */
+/* Navbar Styles for Desktop, Tablet, and Mobile */
+/* Navbar container: centers content, aligns items, and provides padding */
+.navbar {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Space between title and links */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Center items vertically */
+  background-color: #5474fd;
+  max-width: 100%; /* Maximum width for responsive layout */
+  padding: 20px; /* Padding around navbar content */
+}
+
+.navbar-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 65vw;
+  gap: 20px;
+}
+
+/* Navbar title: uses logo font, larger size, and main color */
+.navbar-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 36px;
+  text-decoration: none; /* Removes underline */
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Desktop navigation links: horizontal layout with no list styling */
+.nav-links-desktop {
+  list-style: none; /* Removes default list styling */
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Flex layout for horizontal alignment */
+}
+
+.nav-links-desktop li {
+  padding: 0 15px; /* Space between each link */
+}
+
+/* Link styling for both desktop and mobile menus */
+.nav-links-desktop a,
+.nav-links-mobile a {
+  text-decoration: none; /* Removes underline */
+  -webkit-transition: 0.3s;
+  transition: 0.3s; /* Smooth hover effect */
+  font-family: "Josefin Sans", sans-serif; /* Primary font */
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #ffffff; /* Main color for links */
+}
+
+.nav-links-desktop a:hover {
+  color: #333333; /* Hover color for desktop links */
+}
+
+/* Mobile menu container: hidden by default, shows on smaller screens */
+.mobile-menu {
+  display: none;
+  position: fixed; /* Fixed position for overlay effect */
+  top: 0;
+  right: 0;
+  width: 60%; /* Width of mobile menu */
+  height: 100%; /* Full height of viewport */
+  background-color: #5474fd;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; /* Vertical layout for links */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Center align items */
+  font-size: 1.45rem; /* Font size for mobile links */
+  z-index: 5; /* Layer above other content */
+}
+
+/* Mobile navigation links: centered vertically, styled list */
+.nav-links-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; /* Stack items vertically */
+  text-align: center; /* Center text */
+  gap: 1.2rem; /* Space between links */
+  width: 50%; /* Width of link area */
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links-mobile li {
+  border-bottom: 1px solid #787272; /* Separator line between links */
+  padding-bottom: 1.2rem; /* Space below each link */
+}
+
+/* Icon buttons for opening/closing mobile menu */
+.hamburger,
+.close {
+  font-size: 1.5rem; /* Icon size */
+  cursor: pointer; /* Shows pointer cursor */
+  display: none;
+  padding: 0;
+  background-color: #5474fd;
+  color: #ffffff; /* Main color for icon */
+  border: none; /* Removes border */
+}
+
+/* Close button for mobile menu: positioned in top-right corner */
+.close {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin-top: 20px;
+  margin-right: 20px;
+  display: block; /* Show close button */
+}
+
+/* Utility class for flex display */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Responsive styles for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .nav-links-desktop {
+    display: none; /* Hide desktop links */
+  }
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+}
 /* Navbar styles */
 /* Footer styles: dark background, white text, padding for spacing */
 footer {
@@ -79,6 +231,109 @@ footer {
 }
 
 /* Footer styles */
+/* Responsive styles for sections */
+/* Desktop styles: large screens (min-width: 1025px) */
+@media screen and (min-width: 1025px) {
+  .container-section {
+    max-height: 80vh; /* Adjust section height for desktops */
+  }
+  .main-title-sec-1 {
+    font-size: 3.5rem; /* Increase main title size */
+  }
+  .main-title-sec-2,
+  .main-title-sec-4,
+  .main-title-sec-5,
+  .main-title-sec-6 {
+    font-size: 2.5rem; /* Larger font size for titles */
+  }
+  .main-content-sec-2,
+  .main-content-sec-4,
+  .main-content-sec-5,
+  .main-content-sec-6 {
+    font-size: 2.25rem; /* Increase text size for content */
+  }
+}
+/* Tablet styles: medium screens (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container-section {
+    max-height: 70vh; /* Adjust section height for tablets */
+  }
+  .main-title-sec-1 {
+    font-size: 2rem; /* Reduce main title size */
+  }
+  .main-title-sec-2,
+  .main-title-sec-4,
+  .main-title-sec-5,
+  .main-title-sec-6 {
+    font-size: 1.25rem; /* Smaller titles for tablets */
+    line-height: 26px;
+  }
+  .main-content-sec-2,
+  .main-content-sec-4,
+  .main-content-sec-5,
+  .main-content-sec-6 {
+    font-size: 1.25rem; /* Adjust text size */
+    line-height: 26px;
+  }
+  .button-standard {
+    width: 10rem; /* Smaller buttons for tablets */
+    height: 3rem;
+    font-size: 0.7rem; /* Reduce button text size */
+  }
+}
+/* Mobile styles: small screens (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  .container-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Stack elements vertically */
+    max-height: 60vh; /* Reduce section height */
+  }
+  .main-title-sec-1 {
+    font-size: 1.5rem; /* Smaller main title for mobile */
+    line-height: 26px;
+  }
+  .main-title-sec-2,
+  .main-title-sec-4,
+  .main-title-sec-5,
+  .main-title-sec-6 {
+    font-size: 0.75rem; /* Reduce title font size */
+    line-height: 26px;
+  }
+  .main-content-sec-2,
+  .main-content-sec-4,
+  .main-content-sec-5,
+  .main-content-sec-6 {
+    font-size: 0.5rem; /* Adjust content text size */
+    line-height: 26px;
+  }
+  .button-standard {
+    width: 8rem; /* Smaller button size */
+    height: 2.5rem;
+    font-size: 0.6rem; /* Smaller button text */
+  }
+  .input-style {
+    width: 80%; /* Narrower input field */
+    height: 3rem; /* Reduce input height */
+  }
+  .right-container-section-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Stack elements vertically */
+    width: 100%; /* Full width for container */
+  }
+  .right-container-section-2 img {
+    width: 100%; /* Make images full width */
+    height: auto; /* Keep aspect ratio */
+    margin-bottom: 20px; /* Add spacing between images */
+  }
+}
+/* Responsive adjustments */
 /* Main container for all sections */
 .container-section {
   display: -webkit-box;
@@ -111,7 +366,7 @@ footer {
   background-position: center;
 }
 
-/* Specific height for sections */
+/* Heights for specific sections */
 .container-section-1,
 .container-section-2,
 .container-section-4,
@@ -131,11 +386,9 @@ footer {
 .container-section-3 img {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
-/* Background images for sections */
+/* Background images for specific sections */
 .container-section-1 {
   background-image: url("../img/img-section-1.png");
 }
@@ -248,7 +501,7 @@ footer {
 
 .left-container-section-6 img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -272,7 +525,6 @@ footer {
 .second-content-sec-4,
 .second-content-sec-5,
 .second-content-sec-6 {
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   line-height: 26px;
@@ -351,6 +603,7 @@ footer {
   background: #4563d9;
 }
 
+/* Styles for the scroll button */
 .scroll-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,28 +611,28 @@ footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; /* Organiza o texto e a seta verticalmente */
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; /* Centraliza horizontalmente */
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; /* Centraliza verticalmente */
-  font-family: "Josefin Sans", sans-serif; /* Escolha uma fonte simples */
-  color: #ffffff; /* Define a cor do texto */
-  cursor: pointer; /* Mostra o cursor de "pointer" para indicar interatividade */
-  font-size: 0.9rem; /* Define o tamanho do texto */
+          justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9rem;
   margin-top: 20px;
 }
 
 .scroll-button .arrow {
-  font-size: 0.9rem; /* Define o tamanho da seta */
-  margin-top: 10px; /* Adiciona espaçamento entre o texto e a seta */
+  font-size: 0.9rem;
+  margin-top: 10px;
   -webkit-animation: bounce 1.5s infinite;
-          animation: bounce 1.5s infinite; /* Aplica a animação */
+          animation: bounce 1.5s infinite;
 }
 
-/* Animação de "pulsar" */
+/* Bounce animation */
 @-webkit-keyframes bounce {
   0%, 100% {
     -webkit-transform: translateY(0);
@@ -400,6 +653,7 @@ footer {
             transform: translateY(10px);
   }
 }
+/* Styles for input fields */
 .input-style {
   width: 40vw;
   height: 4rem;
