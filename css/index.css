@@ -1,12 +1,11 @@
-@charset "UTF-8";
 /* Importing necessary modules and styles */
 /* Font and color variables */
 /* Font for logos and headers to create a unique brand style */
 /* Primary font for most content to ensure readability */
 /* Secondary font for additional styling, often used for titles */
 /* Primary color for text or elements that need emphasis (white) */
-/* Secondary color for backgrounds or contrasting areas (black) */
-/* Secondary color for backgrounds or contrasting areas (black) */
+/* Secondary color for backgrounds or contrasting areas (white/gray) */
+/* Tertiary color for backgrounds or contrasting areas (black) */
 /* Font styles and variables */
 /* Navbar styles */
 /* Footer styles: dark background, white text, padding for spacing */
@@ -79,6 +78,7 @@ footer {
 }
 
 /* Footer styles */
+/* Main container for all sections */
 .container-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,6 +88,9 @@ footer {
   background-color: #333333;
 }
 
+/* Shared styles for sections 4, 5, and 6 */
+.container-section-4,
+.container-section-5,
 .container-section-6 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,12 +107,54 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../img/img-section-6.png") !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/* Background images for sections */
+.container-section-4 {
+  background-image: url("../img/img-section-4.png") !important;
+}
+
+.container-section-5 {
+  background-image: url("../img/img-section-5.png") !important;
+}
+
+.container-section-6 {
+  background-image: url("../img/img-section-6.png") !important;
+}
+
+/* Left and right containers for sections */
+.left-container-section-4,
+.right-container-section-5 {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  background-color: #333333;
+}
+
+.right-container-section-4,
+.left-container-section-5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60vw;
+}
+
+/* Inner containers for sections 4, 5, and 6 */
+.container-section-4-inside,
+.container-section-5-inside,
 .container-section-6-inside {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,28 +165,40 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #333333;
   width: 65vw;
   height: 30vh;
   gap: 20px;
 }
 
-.left-container {
+/* Overrides for specific sections */
+.container-section-4-inside,
+.container-section-5-inside {
+  background-color: transparent;
+}
+
+.container-section-6-inside {
+  background-color: #333333;
+}
+
+/* Left container for section 6 */
+.left-container-section-6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 40vw;
   height: 100%;
 }
-.left-container img {
+
+.left-container-section-6 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.right-container {
-  margin: 0px 20px 0px 20px;
+/* Right container for section 6 */
+.right-container-section-6 {
+  margin: 0px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,11 +213,17 @@ footer {
   gap: 10px;
 }
 
-.right-container p {
+.right-container-section-6 p {
   margin: 0;
 }
 
-/* Estilos comuns para todas as seções */
+/* Common styles for text elements in section 6 */
+.main-title-sec-4,
+.main-content-sec-4,
+.second-content-sec-4,
+.main-title-sec-5,
+.main-content-sec-5,
+.second-content-sec-5,
 .main-title-sec-6,
 .main-content-sec-6,
 .second-content-sec-6 {
@@ -171,21 +234,55 @@ footer {
   color: #ffffff;
 }
 
+.main-title-sec-4,
+.main-title-sec-5,
 .main-title-sec-6 {
   font-family: "Aleo", sans-serif;
   font-size: 2.25rem;
 }
 
+.main-content-sec-4,
+.main-content-sec-5,
 .main-content-sec-6 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
 }
 
+.second-content-sec-4,
+.second-content-sec-5,
 .second-content-sec-6 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
 }
 
+/* Styles for icons */
 .color-icon {
   color: #5474fd !important;
+}
+
+/* Styles for the "Book Now" button */
+.button-standard {
+  width: 12rem;
+  height: 3.94rem;
+  background: #5474fd;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.button-standard:hover {
+  -webkit-transform: translateY(-4px) scale(1.05);
+          transform: translateY(-4px) scale(1.05);
+  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  background: #4563d9;
 }
