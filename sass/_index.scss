@@ -3,14 +3,17 @@
 @import "navbar"; /* Navbar styles */
 @import "footer"; /* Footer styles */
 
+/* Main container for all sections */
 .container-section {
-    // All sections
     display: flex;
     width: 100%;
     max-height: 100vh;
     background-color: fonts.$tertiary-color;
 }
 
+/* Shared styles for sections 4, 5, and 6 */
+.container-section-4,
+.container-section-5,
 .container-section-6 {
     display: flex;
     flex-direction: column;
@@ -18,36 +21,80 @@
     height: 70vh;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/img-section-6.png") !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+/* Background images for sections */
+.container-section-4 {
+    background-image: url("../img/img-section-4.png") !important;
+}
+
+.container-section-5 {
+    background-image: url("../img/img-section-5.png") !important;
+}
+
+.container-section-6 {
+    background-image: url("../img/img-section-6.png") !important;
+}
+
+/* Left and right containers for sections */
+.left-container-section-4,
+.right-container-section-5 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    justify-content: center;
+    gap: 10px;
+    background-color: fonts.$tertiary-color;
+}
+
+.right-container-section-4,
+.left-container-section-5 {
+    display: flex;
+    width: 60vw;
+}
+
+/* Inner containers for sections 4, 5, and 6 */
+.container-section-4-inside,
+.container-section-5-inside,
 .container-section-6-inside {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: fonts.$tertiary-color;
     width: 65vw;
     height: 30vh;
     gap: 20px;
 }
 
-.left-container {
+/* Overrides for specific sections */
+.container-section-4-inside,
+.container-section-5-inside {
+    background-color: transparent;
+}
+
+.container-section-6-inside {
+    background-color: fonts.$tertiary-color;
+}
+
+/* Left container for section 6 */
+.left-container-section-6 {
     display: flex;
     width: 40vw;
     height: 100%;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
 
-.right-container {
-    margin: 0px 20px 0px 20px;
+.left-container-section-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right container for section 6 */
+.right-container-section-6 {
+    margin: 0px 20px;
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -55,11 +102,17 @@
     gap: 10px;
 }
 
-.right-container p {
+.right-container-section-6 p {
     margin: 0;
 }
 
-/* Estilos comuns para todas as seções */
+/* Common styles for text elements in section 6 */
+.main-title-sec-4,
+.main-content-sec-4,
+.second-content-sec-4,
+.main-title-sec-5,
+.main-content-sec-5,
+.second-content-sec-5,
 .main-title-sec-6,
 .main-content-sec-6,
 .second-content-sec-6 {
@@ -69,22 +122,50 @@
     line-height: 26px;
     color: fonts.$main-color;
 }
-
+.main-title-sec-4,
+.main-title-sec-5,
 .main-title-sec-6 {
     font-family: fonts.$secondary-font;
     font-size: 2.25rem;
 }
 
+.main-content-sec-4,
+.main-content-sec-5,
 .main-content-sec-6 {
     font-family: fonts.$main-font;
     font-size: 2rem;
 }
-
+.second-content-sec-4,
+.second-content-sec-5,
 .second-content-sec-6 {
     font-family: fonts.$main-font;
     font-size: 1rem;
 }
 
+/* Styles for icons */
 .color-icon {
     color: #5474fd !important;
+}
+
+/* Styles for the "Book Now" button */
+.button-standard {
+    width: 12rem;
+    height: 3.94rem;
+    background: #5474fd;
+    font-family: fonts.$main-font;
+    font-size: 0.8rem;
+    color: fonts.$main-color;
+    border: none;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.button-standard:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    background: #4563d9;
 }
