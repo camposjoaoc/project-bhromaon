@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Importing necessary modules and styles */
 /* Font and color variables */
 /* Font for logos and headers to create a unique brand style */
@@ -88,46 +89,78 @@ footer {
   background-color: #333333;
 }
 
-/* Shared styles for sections 4, 5, and 6 */
+/* Shared styles for container sections */
+.container-section-1,
+.container-section-2,
+.container-section-3,
 .container-section-4,
 .container-section-5,
 .container-section-6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  height: 70vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/* Specific height for sections */
+.container-section-1,
+.container-section-2,
+.container-section-4,
+.container-section-5,
+.container-section-6 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70vh;
+}
+
+.container-section-3 {
+  height: 30vh;
+}
+
+.container-section-3 img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 /* Background images for sections */
+.container-section-1 {
+  background-image: url("../img/img-section-1.png");
+}
+
+.container-section-2 {
+  background-image: url("../img/img-section-2.png");
+}
+
 .container-section-4 {
-  background-image: url("../img/img-section-4.png") !important;
+  background-image: url("../img/img-section-4.png");
 }
 
 .container-section-5 {
-  background-image: url("../img/img-section-5.png") !important;
+  background-image: url("../img/img-section-5.png");
 }
 
 .container-section-6 {
-  background-image: url("../img/img-section-6.png") !important;
+  background-image: url("../img/img-section-6.png");
 }
 
-/* Left and right containers for sections */
+/* Shared styles for left and right containers */
+.left-container-section-2,
 .left-container-section-4,
-.right-container-section-5 {
+.right-container-section-5,
+.right-container-section-6 {
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,7 +174,12 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  background-color: #333333;
+  background-color: rgba(51, 51, 51, 0.9); /* 90% opacity */
+}
+
+.right-container-section-2 {
+  width: 40vw;
+  gap: 20px;
 }
 
 .right-container-section-4,
@@ -152,7 +190,24 @@ footer {
   width: 60vw;
 }
 
-/* Inner containers for sections 4, 5, and 6 */
+.container-section-1-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Inner containers for sections */
+.container-section-2-inside,
 .container-section-4-inside,
 .container-section-5-inside,
 .container-section-6-inside {
@@ -171,6 +226,8 @@ footer {
 }
 
 /* Overrides for specific sections */
+.right-container-section-6,
+.left-container-section-2,
 .container-section-4-inside,
 .container-section-5-inside {
   background-color: transparent;
@@ -198,34 +255,22 @@ footer {
 
 /* Right container for section 6 */
 .right-container-section-6 {
-  margin: 0px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 60vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10px;
+  margin: 0 20px;
 }
 
-.right-container-section-6 p {
-  margin: 0;
-}
-
-/* Common styles for text elements in section 6 */
+/* Common styles for text elements */
+.main-title-sec-1,
+.main-title-sec-2,
 .main-title-sec-4,
-.main-content-sec-4,
-.second-content-sec-4,
 .main-title-sec-5,
-.main-content-sec-5,
-.second-content-sec-5,
 .main-title-sec-6,
+.main-content-sec-2,
+.main-content-sec-4,
+.main-content-sec-5,
 .main-content-sec-6,
+.second-content-sec-2,
+.second-content-sec-4,
+.second-content-sec-5,
 .second-content-sec-6 {
   font-optical-sizing: auto;
   font-weight: 400;
@@ -234,6 +279,7 @@ footer {
   color: #ffffff;
 }
 
+.main-title-sec-2,
 .main-title-sec-4,
 .main-title-sec-5,
 .main-title-sec-6 {
@@ -241,6 +287,8 @@ footer {
   font-size: 2.25rem;
 }
 
+.main-title-sec-1,
+.main-content-sec-2,
 .main-content-sec-4,
 .main-content-sec-5,
 .main-content-sec-6 {
@@ -248,16 +296,32 @@ footer {
   font-size: 2rem;
 }
 
+.main-title-sec-1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.second-title-sec-1,
+.second-content-sec-2,
 .second-content-sec-4,
 .second-content-sec-5,
 .second-content-sec-6 {
   font-family: "Josefin Sans", sans-serif;
+  color: #e8e8e8;
   font-size: 1rem;
+}
+.second-title-sec-1.second-title-sec-1,
+.second-content-sec-2.second-title-sec-1,
+.second-content-sec-4.second-title-sec-1,
+.second-content-sec-5.second-title-sec-1,
+.second-content-sec-6.second-title-sec-1 {
+  font-size: 1.375rem;
+  font-weight: 400;
 }
 
 /* Styles for icons */
 .color-icon {
-  color: #5474fd !important;
+  color: #5474fd;
 }
 
 /* Styles for the "Book Now" button */
@@ -285,4 +349,72 @@ footer {
   -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
   background: #4563d9;
+}
+
+.scroll-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; /* Organiza o texto e a seta verticalmente */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Centraliza horizontalmente */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Centraliza verticalmente */
+  font-family: "Josefin Sans", sans-serif; /* Escolha uma fonte simples */
+  color: #ffffff; /* Define a cor do texto */
+  cursor: pointer; /* Mostra o cursor de "pointer" para indicar interatividade */
+  font-size: 0.9rem; /* Define o tamanho do texto */
+  margin-top: 20px;
+}
+
+.scroll-button .arrow {
+  font-size: 0.9rem; /* Define o tamanho da seta */
+  margin-top: 10px; /* Adiciona espaçamento entre o texto e a seta */
+  -webkit-animation: bounce 1.5s infinite;
+          animation: bounce 1.5s infinite; /* Aplica a animação */
+}
+
+/* Animação de "pulsar" */
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+.input-style {
+  width: 40vw;
+  height: 4rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  background-color: white;
+  height: 4.1rem;
+  padding: 3px;
 }
