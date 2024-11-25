@@ -1,0 +1,57 @@
+/* Footer styles: dark background, white text, padding for spacing */
+footer {
+    background-color: fonts.$tertiary-color;
+    font-family: fonts.$main-font;
+    color: #fff;
+    padding: 1em 0;
+    height: 20vh;
+}
+
+/* Footer content: flex layout to center items vertically and horizontally */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align text */
+    margin-top: 7vh;
+}
+.footer-first-title {
+    font-size: 1.5rem;
+}
+
+.footer-second-title {
+    font-size: 1rem;
+}
+
+/* Copyright text: small margin for separation from icons */
+.footer-content p {
+    margin: 0.5em 0;
+}
+
+/* Social icons container: flex layout for alignment and spacing */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-top: 0.5em; /* Space above icons */
+}
+.social-icons a:hover {
+    color: antiquewhite; /* Hover color for footer links */
+}
+
+/* Icon links: white color, larger size, and smooth hover transition */
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+/* Hover effect for icons: changes color to light gray */
+.social-icons a:hover {
+    color: #0077b5;
+}
+
+/* LinkedIn icon: sets the official LinkedIn blue color and adjusts icon size */
+.linkedin-icon {
+    color: #0077b5; /* Official LinkedIn blue color */
+}
+

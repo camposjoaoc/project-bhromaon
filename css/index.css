@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/* Importing necessary modules and styles */
+/* Font and color variables */
+/* Font for logos and headers to create a unique brand style */
+/* Primary font for most content to ensure readability */
+/* Secondary font for additional styling, often used for titles */
+/* Primary color for text or elements that need emphasis (white) */
+/* Secondary color for backgrounds or contrasting areas (black) */
+/* Secondary color for backgrounds or contrasting areas (black) */
+/* Font styles and variables */
+/* Navbar styles */
+/* Footer styles: dark background, white text, padding for spacing */
+footer {
+  background-color: #333333;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  padding: 1em 0;
+  height: 20vh;
+}
+
+/* Footer content: flex layout to center items vertically and horizontally */
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; /* Stack items vertically */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Center items horizontally */
+  text-align: center; /* Center-align text */
+  margin-top: 7vh;
+}
+
+.footer-first-title {
+  font-size: 1.5rem;
+}
+
+.footer-second-title {
+  font-size: 1rem;
+}
+
+/* Copyright text: small margin for separation from icons */
+.footer-content p {
+  margin: 0.5em 0;
+}
+
+/* Social icons container: flex layout for alignment and spacing */
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px; /* Space between icons */
+  margin-top: 0.5em; /* Space above icons */
+}
+
+.social-icons a:hover {
+  color: antiquewhite; /* Hover color for footer links */
+}
+
+/* Icon links: white color, larger size, and smooth hover transition */
+.social-icons a {
+  color: #fff;
+  font-size: 1.5em;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+/* Hover effect for icons: changes color to light gray */
+.social-icons a:hover {
+  color: #0077b5;
+}
+
+/* LinkedIn icon: sets the official LinkedIn blue color and adjusts icon size */
+.linkedin-icon {
+  color: #0077b5; /* Official LinkedIn blue color */
+}
+
+/* Footer styles */
+.container-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-height: 100vh;
+  background-color: #333333;
+}
+
+.container-section-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 70vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../img/img-section-6.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container-section-6-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333333;
+  width: 65vw;
+  height: 30vh;
+  gap: 20px;
+}
+
+.left-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vw;
+  height: 100%;
+}
+.left-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.right-container {
+  margin: 0px 20px 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.right-container p {
+  margin: 0;
+}
+
+/* Estilos comuns para todas as seções */
+.main-title-sec-6,
+.main-content-sec-6,
+.second-content-sec-6 {
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.main-title-sec-6 {
+  font-family: "Aleo", sans-serif;
+  font-size: 2.25rem;
+}
+
+.main-content-sec-6 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+
+.second-content-sec-6 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.color-icon {
+  color: #5474fd !important;
+}
