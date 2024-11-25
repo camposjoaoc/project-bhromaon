@@ -1,0 +1,111 @@
+/* Responsive styles for sections */
+
+/* Desktop styles: large screens (min-width: 1025px) */
+@media screen and (min-width: 1025px) {
+    .container-section {
+        max-height: 80vh; /* Adjust section height for desktops */
+    }
+
+    .main-title-sec-1 {
+        font-size: 3.5rem; /* Increase main title size */
+    }
+
+    .main-title-sec-2,
+    .main-title-sec-4,
+    .main-title-sec-5,
+    .main-title-sec-6 {
+        font-size: 2.5rem; /* Larger font size for titles */
+    }
+
+    .main-content-sec-2,
+    .main-content-sec-4,
+    .main-content-sec-5,
+    .main-content-sec-6 {
+        font-size: 2.25rem; /* Increase text size for content */
+    }
+}
+
+/* Tablet styles: medium screens (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container-section {
+        max-height: 70vh; /* Adjust section height for tablets */
+    }
+
+    .main-title-sec-1 {
+        font-size: 2rem; /* Reduce main title size */
+    }
+
+    .main-title-sec-2,
+    .main-title-sec-4,
+    .main-title-sec-5,
+    .main-title-sec-6 {
+        font-size: 1.25rem; /* Smaller titles for tablets */
+        line-height: 26px;
+    }
+
+    .main-content-sec-2,
+    .main-content-sec-4,
+    .main-content-sec-5,
+    .main-content-sec-6 {
+        font-size: 1.25rem; /* Adjust text size */
+        line-height: 26px;
+    }
+
+    .button-standard {
+        width: 10rem; /* Smaller buttons for tablets */
+        height: 3rem;
+        font-size: 0.7rem; /* Reduce button text size */
+    }
+}
+
+/* Mobile styles: small screens (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    .container-section {
+        flex-direction: column; /* Stack elements vertically */
+        max-height: 60vh; /* Reduce section height */
+    }
+
+    .main-title-sec-1 {
+        font-size: 1.5rem; /* Smaller main title for mobile */
+        line-height: 26px;
+    }
+
+    .main-title-sec-2,
+    .main-title-sec-4,
+    .main-title-sec-5,
+    .main-title-sec-6 {
+        font-size: 0.75rem; /* Reduce title font size */
+        line-height: 26px;
+    }
+
+    .main-content-sec-2,
+    .main-content-sec-4,
+    .main-content-sec-5,
+    .main-content-sec-6 {
+        font-size: 0.5rem; /* Adjust content text size */
+        line-height: 26px;
+    }
+
+    .button-standard {
+        width: 8rem; /* Smaller button size */
+        height: 2.5rem;
+        font-size: 0.6rem; /* Smaller button text */
+    }
+
+    .input-style {
+        width: 80%; /* Narrower input field */
+        height: 3rem; /* Reduce input height */
+    }
+
+    .right-container-section-2 {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        width: 100%; /* Full width for container */
+    }
+
+    .right-container-section-2 img {
+        width: 100%; /* Make images full width */
+        height: auto; /* Keep aspect ratio */
+        margin-bottom: 20px; /* Add spacing between images */
+    }
+}

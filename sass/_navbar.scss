@@ -1,0 +1,122 @@
+/* Navbar Styles for Desktop, Tablet, and Mobile */
+
+/* Navbar container: centers content, aligns items, and provides padding */
+.navbar {
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Space between title and links */
+    align-items: center; /* Center items vertically */
+    background-color: #5474fd;
+    max-width: 100%; /* Maximum width for responsive layout */
+    padding: 20px; /* Padding around navbar content */
+}
+
+.navbar-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65vw;
+    gap: 20px;
+}
+
+/* Navbar title: uses logo font, larger size, and main color */
+.navbar-title {
+    font-family: fonts.$logo-font;
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 36px;
+    text-decoration: none; /* Removes underline */
+    color: fonts.$main-color;
+    cursor: pointer;
+}
+
+/* Desktop navigation links: horizontal layout with no list styling */
+.nav-links-desktop {
+    list-style: none; /* Removes default list styling */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flex layout for horizontal alignment */
+}
+.nav-links-desktop li {
+    padding: 0 15px; /* Space between each link */
+}
+
+/* Link styling for both desktop and mobile menus */
+.nav-links-desktop a,
+.nav-links-mobile a {
+    text-decoration: none; /* Removes underline */
+    transition: 0.3s; /* Smooth hover effect */
+    font-family: fonts.$main-font; /* Primary font */
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
+    color: fonts.$main-color; /* Main color for links */
+}
+.nav-links-desktop a:hover {
+    color: #333333; /* Hover color for desktop links */
+}
+
+/* Mobile menu container: hidden by default, shows on smaller screens */
+.mobile-menu {
+    display: none;
+    position: fixed; /* Fixed position for overlay effect */
+    top: 0;
+    right: 0;
+    width: 60%; /* Width of mobile menu */
+    height: 100%; /* Full height of viewport */
+    background-color: #5474fd;
+    flex-direction: column; /* Vertical layout for links */
+    align-items: center; /* Center align items */
+    font-size: 1.45rem; /* Font size for mobile links */
+    z-index: 5; /* Layer above other content */
+}
+
+/* Mobile navigation links: centered vertically, styled list */
+.nav-links-mobile {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+    gap: 1.2rem; /* Space between links */
+    width: 50%; /* Width of link area */
+    list-style: none;
+    padding: 0;
+}
+.nav-links-mobile li {
+    border-bottom: 1px solid #787272; /* Separator line between links */
+    padding-bottom: 1.2rem; /* Space below each link */
+}
+
+/* Icon buttons for opening/closing mobile menu */
+.hamburger,
+.close {
+    font-size: 1.5rem; /* Icon size */
+    cursor: pointer; /* Shows pointer cursor */
+    display: none;
+    padding: 0;
+    background-color: #5474fd;
+    color: fonts.$main-color; /* Main color for icon */
+    border: none; /* Removes border */
+}
+
+/* Close button for mobile menu: positioned in top-right corner */
+.close {
+    align-self: end;
+    margin-top: 20px;
+    margin-right: 20px;
+    display: block; /* Show close button */
+}
+
+/* Utility class for flex display */
+.flex {
+    display: flex;
+}
+
+/* Responsive styles for screens up to 768px */
+@media screen and (max-width: 768px) {
+    .nav-links-desktop {
+        display: none; /* Hide desktop links */
+    }
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+}
